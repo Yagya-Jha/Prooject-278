@@ -1,0 +1,80 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.6691360008193213 0.7418194484305229 0.04428225759556344 0.47636687061677313
+  position -7.721126038829508 -0.4842846684922177 2.1512637159946055
+}
+TexturedBackground {
+  texture "factory"
+  skyColor [
+    0 0 1
+  ]
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+  floorTileSize 3 3
+  wallThickness 0.05
+  wallHeight 0.05
+}
+Pose {
+  translation 0 0 0.42
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.333333 1
+      }
+      geometry Sphere {
+        radius 0.4
+      }
+    }
+  ]
+}
+Transform {
+  translation 0 -1.37 0.42
+  scale 10 10 10
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0.0156863
+        roughness 1
+        metalness 0.4
+      }
+      geometry Cone {
+        bottomRadius 0.05
+        height 0.1
+      }
+    }
+  ]
+}
+Transform {
+  translation -6.33 -9.01504 -0.0499293
+  rotation -1 0 0 -1.5707953071795862
+  scale 0.8 0.8 0.8
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0.0156863
+        roughness 1
+        metalness 0.4
+      }
+      geometry Mesh {
+        url [
+          "../../../../../Downloads/3vhh1v51xvk0-Car/Car/Car.obj/car.obj"
+        ]
+      }
+    }
+  ]
+}
+E-puck {
+  translation -1.045235243018649 -1.4915597552880873 -6.430538184120857e-05
+  rotation -0.0005449539836463568 0.0006904186635903539 -0.9999996131735376 -1.090459463924402
+}
